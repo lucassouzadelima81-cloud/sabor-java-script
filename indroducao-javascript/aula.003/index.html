@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>indrodução javascript</h1>
-     <!--
+    <!--
     pedirpara o usuario digitar o nome e idade e apresentar na tela"seu nome é ...e sua idade é ...-->
 
     <script>
-        let nome = prompt("digite o seu nome")
-        let idade = prompt("digite sua idade")
-        
-        alert("seu nome é" + nome +" e sua idade é" + idade)
-        alert("olá," +nome+ "! seja bem-vindo")
-       /*  prompt("digiteseu nome")
-        alert("olá mundo!") */
+        let primeiroNumero = Number(prompt("digite o primeiro numero:"))
+        let segundoNumero = Number(prompt("digite o segundo numero:"))
+        let soma = primeiroNumero + segundoNumero
+
+        alert(typeof primeiroNumero)
+
+        alert(primeiroNumero + "+" + segundoNumero + "=" + soma)
     </script>
-    
+
 </body>
+
 </html>
