@@ -6,4 +6,5 @@ let filmesTop10 = ["barbie", "sonic", "super Mario", "homemAranha", "batman", "m
         [4, 5, 6],
         [7, 8, 9, 10]
     ]
+    console.log(filmesTop10[0])
     console.log(array[0][0])
