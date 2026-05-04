@@ -1,6 +1,9 @@
 const divLIstaFimes = document.querySelector("#lista_filmes")
+const btnAção = document.querySelector("#btn_ação")
 const btnTerror = document.querySelector("#btn_terror")
+const btnComédia = document.querySelector("btn_comédia")
 const filmes = [
+    // terror
   {
     titulo: "O Iluminado",
     sinopse: "Um homem se torna zelador de um hotel isolado e começa a perder a sanidade.",
@@ -70,6 +73,7 @@ const filmes = [
     titulo: "Um Lugar Silencioso", 
     sinopse: "Uma família tenta sobreviver em silêncio absoluto para não ser caçada por monstros.", genero: "Terror" 
 },
+//    ação
   { 
     titulo: "John Wick", 
     sinopse: "Um ex-assassino sai da aposentadoria para vingar a morte de seu cachorro.", 
@@ -171,7 +175,7 @@ const filmes = [
     genero: "Animação" 
 },
 
-  // COMÉDIA
+  // comédia
   { 
     titulo: "Se Beber, Não Case!", 
     sinopse: "Amigos acordam em Las Vegas sem memória e sem o noivo após uma despedida de solteiro.", 
@@ -274,8 +278,29 @@ function filtrarFilmesTerror() {
     const filmesTerror = filmes.filter((filme)=> {
         return filme.genero === "Terror"
     })
-    console.log(filmesTerror)
+    filmesTerror.forEach((filme) => {
+        divLIstaFimes.innerHTML += `<li><b>${filme.titulo}</b> <br> ${filme.sinopse} <br> <i>${filme.genero}</i></li>`
+    })
 }
+
+function filtrarFilmesAção() {
+    const filmesAção = filmes.filter((filme)=> {
+        return filme.genero === "Ação"
+    })
+    filmesAção.forEach((filme) => {
+        divLIstaFimes.innerHTML += `<li><b>${filme.titulo}</b> <br> ${filme.sinopse} <br> <i>${filme.genero}</i></li>`
+    })
+}
+function filtrarFilmesComédia() {
+    const filmesComédia = filmes.filter((filme)=> {
+        return filme.genero === "Comédia"
+    })
+    filmesComédia.forEach((filme) => {
+        divLIstaFimes.innerHTML += `<li><b>${filme.titulo}</b> <br> ${filme.sinopse} <br> <i>${filme.genero}</i></li>`
+    })
+}
+btnComédia.addEventListener("click",filtrarFilmesComédia)
+btnAção.addEventListener("click",filtrarFilmesAção)
 btnTerror.addEventListener("click",filtrarFilmesTerror)
 // filmes.forEach(filme => {
 //     const li = document.createElement("li");
